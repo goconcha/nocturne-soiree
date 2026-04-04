@@ -30,8 +30,11 @@ body {
 }
 
 /* クリックやホバーで回転 */
-.ticket-container:hover .ticket {
+.ticket-container:hover .ticket.is-flipped {
     transform: rotateY(180deg);
+}
+.ticket {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .ticket-front, .ticket-back {
