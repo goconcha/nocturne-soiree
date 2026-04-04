@@ -20,8 +20,8 @@ body {
 }
 
 .ticket {
-    width: 400px;
-    height: 200px;
+    width: 1025px;
+    height: 481px;
     position: relative;
     transition: transform 1.5s;
     transform-style: preserve-3d;
@@ -149,8 +149,8 @@ body {
     
     /* 1. チケットのサイズを画面に合わせる */
     .ticket {
-        width: 80vw;     /* 画面の横幅の80%にする */
-        height: 40vw;    /* 横幅に合わせて高さも調整（2:1の比率） */
+        width: 90vw;     /* 画面の横幅の80%にする */
+        height: 45vw;    /* 横幅に合わせて高さも調整（2:1の比率） */
     }
 
     /* 2. ギャラリーを1列にする */
