@@ -52,16 +52,31 @@
     </footer>
 
 <script>
-    // スクロールを検知して作品を表示させる魔法のコード
+    const ticket = document.querySelector('.ticket');
+    const gallery = document.querySelector('.gallery-section');
+    const footer = document.querySelector('.footer');
+
+    // 1. スクロール検知：ある程度スクロールしたら勝手に裏返る
     window.addEventListener('scroll', function() {
-        const gallery = document.querySelector('.gallery-section');
-        const footer = document.querySelector('.footer');
-        
-        // チケットを通り過ぎるくらい（300px）スクロールしたら
-        if (window.scrollY > 300) {
+        const scrollValue = window.scrollY;
+
+        // チケットを裏返すタイミング（150pxくらいスクロールしたら）
+        if (scrollValue > 150) {
+            ticket.classList.add('is-flipped');
+        } else {
+            ticket.classList.remove('is-flipped');
+        }
+
+        // 下のコンテンツをふわっと出す（300pxくらいスクロールしたら）
+        if (scrollValue > 300) {
             gallery.classList.add('is-visible');
             footer.classList.add('is-visible');
         }
+    });
+
+    // 2. タップ（クリック）検知：手動で表裏を切り替える
+    ticket.addEventListener('click', function() {
+        ticket.classList.toggle('is-flipped');
     });
 </script>
 </body>
