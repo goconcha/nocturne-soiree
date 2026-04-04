@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ticket Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="ticket-section">
+        <div class="ticket-container">
+            <div class="ticket">
+                <div class="ticket-front">
+                    <img src="images/soiree_kari.jpeg" alt="チケット表">
+                </div>
+                <div class="ticket-back">
+                    <img src="https://via.placeholder.com/400x200/222/fff?text=TICKET+BACK" alt="チケット裏">
+                </div>
+            </div>
+        </div>
+        <p class="scroll-hint">Scroll Down</p>
+    </section>
+
+    <section class="gallery-section">
+        <h2 class="section-title">Works</h2>
+        <div class="gallery-grid">
+            
+            <div class="work-item">
+                <video controls src="your-video.mp4" poster="video-placeholder.jpg"></video>
+                <p>Promotional video</p>
+                <a href="your-video.mp4" download class="download-btn">Download Video</a>
+            </div>
+
+            <div class="work-item">
+                <img src="https://via.placeholder.com/600x400/555/eee" alt="作品画像">
+                <p>Wallpaper</p>
+                <a href="https://via.placeholder.com/600x400/555/eee" download class="download-btn">Download Image</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="sns-link">
+            <a href="https://x.com/@goconcha" target="_blank">𝕏 (Twitter)</a>
+        </div>
+        <p class="copyright">&copy; 2026 Your Name</p>
+    </footer>
+
+<script>
+    // スクロールを検知して作品を表示させる魔法のコード
+    window.addEventListener('scroll', function() {
+        const gallery = document.querySelector('.gallery-section');
+        const footer = document.querySelector('.footer');
+        
+        // チケットを通り過ぎるくらい（300px）スクロールしたら
+        if (window.scrollY > 300) {
+            gallery.classList.add('is-visible');
+            footer.classList.add('is-visible');
+        }
+    });
+</script>
+</body>
+</html>
