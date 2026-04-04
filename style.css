@@ -3,7 +3,8 @@ body {
     margin: 0;
     background-color: #1a1a1a; /* 深いグレー */
     color: #d1d1d1;
-    font-family: "serif"; /* 格式高い明朝系 */
+    font-family:'Noto Serif JP', serif;
+    font-weight: 300;
 }
 
 /* チケットのアニメーション設定 */
